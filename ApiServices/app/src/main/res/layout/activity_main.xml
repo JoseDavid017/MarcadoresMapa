@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101820">
+
+    <!-- Botón Conectar -->
+    <Button
+        android:id="@+id/btnconectar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Conectar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D72638"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnlimpiar"
+        app:layout_constraintWidth_percent="0.33"/>
+
+    <!-- Botón Limpiar -->
+    <Button
+        android:id="@+id/btnlimpiar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Limpiar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0779E4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnconectar"
+        app:layout_constraintEnd_toStartOf="@+id/listado"
+        app:layout_constraintWidth_percent="0.33"/>
+
+    <!-- Botón Ver Lista -->
+    <Button
+        android:id="@+id/listado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Lista"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#20BF55"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnlimpiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.34"/>
+
+    <!-- TextView JSON -->
+    <TextView
+        android:id="@+id/txtjson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/btnconectar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCompeticiones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        android:contentDescription="Lista de competiciones"
+        app:layout_constraintTop_toBottomOf="@id/txtjson"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
